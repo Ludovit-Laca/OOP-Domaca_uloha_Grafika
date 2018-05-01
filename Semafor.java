@@ -21,12 +21,12 @@ public class Semafor extends JComponent {
     }
 
     @Override
-    public void paintComponent(Graphics g) {
+    public void paintComponent(Graphics g) {   
         super.paintComponent(g);
         vykresli(g);
     }
 
-    public void farby() {
+    public void farby() {       
         j++;
         if (j > 4) {
             j = 1;
@@ -35,13 +35,13 @@ public class Semafor extends JComponent {
 
     }
 
-    public void vykresli(Graphics g) {
+    public void vykresli(Graphics g) {     // vykreslenie
         // telo
-        g.setColor(Color.DARK_GRAY);
+        g.setColor(Color.DARK_GRAY);       
         g.fillRect(100, 100, 100, 200);
-        g.setColor(Color.GRAY);
+        g.setColor(Color.GRAY);        
 
-        if (j == 1 || j == 2) {
+        if (j == 1 || j == 2) {          // svieti červena
             g.setColor(Color.red);
             if (j == 1) {
                 System.err.println("Červená");
@@ -50,14 +50,14 @@ public class Semafor extends JComponent {
         g.fillOval(130, 120 + 0 * 50, 40, 40);
         g.setColor(Color.GRAY);
 
-        if (j == 2 || j == 4) {
+        if (j == 2 || j == 4) {              // svieti žlta
             g.setColor(Color.YELLOW);
             System.err.println("Žltá");
         }
         g.fillOval(130, 120 + 1 * 50, 40, 40);
         g.setColor(Color.GRAY);
 
-        if (j == 3) {
+        if (j == 3) {                       // svieti zelena
             g.setColor(Color.green);
             System.err.println("Zelená");
         }
